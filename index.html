@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<title>KING TRI PROJECT</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">♛</div>
+    <div class="login-label">KING TRI PROJECT</div>
+    <h2>WELCOME.</h2>
+    <p>Silakan login untuk melanjutkan.</p>
+
+    <form id="loginForm">
+      <input
+        type="text"
+        id="loginUsername"
+        placeholder="Username"
+        autocomplete="username"
+        required
+      >
+
+      <input
+        type="password"
+        id="loginPassword"
+        placeholder="Password"
+        autocomplete="current-password"
+        required
+      >
+
+      <button type="submit">LOGIN ↗</button>
+      <div id="loginError"></div>
+    </form>
+
+    <div class="login-footer">Helloworld</div>
+  </div>
+</div>
+
+
+<div id="ktpWelcome">
+  <div class="ktp-welcome-content">
+    <div class="ktp-welcome-kicker">PERSONAL PROJECT • EST. KING TRI</div>
+    <div class="ktp-welcome-title">WELCOME TO<br><span>KING TRI PROJECT</span></div>
+    <div class="ktp-welcome-line"></div>
+    <div class="ktp-welcome-loading">PREPARING YOUR EXPERIENCE</div>
+  </div>
+</div>
+
+<div class="glow"></div>
+
+<nav>
+  <div class="logo">KING TRI.</div>
+  <div class="nav-actions">
+    <button type="button" class="settings-btn" id="openSettings" aria-label="Pengaturan website" title="Pengaturan">⚙</button>
+      <span id="ktpUserInfo"></span>
+    <div class="status">● PERSONAL PROJECT</div>
+  </div>
+</nav>
+
+<main id="intro">
+  <section class="hero">
+    <div class="label">WELCOME TO MY WORLD</div>
+
+    <h1>KING TRI<br><span>PROJECT.</span></h1>
+
+    <div class="line"></div>
+
+    <p class="description">
+      Ini website pribadi saya. Isinya beberapa project yang pernah saya buat,
+      hal-hal yang sedang saya coba, dan sedikit cerita tentang saya.
+      Masih ada yang sederhana, masih ada juga yang belum selesai.
+      Ya, namanya juga masih belajar.
+    </p>
+
+    <div class="actions">
+      <button class="primary" onclick="enterProject()">
+        Jelajahi Project ↗
+      </button>
+
+      <button class="secondary" onclick="aboutMe()">
+        Tentang saya
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>Kenapa Saya Bikin Ini?</h2>
+    <p>
+      Awalnya saya cuma suka utak-atik tampilan website dan mencoba
+      hal baru lewat coding. Lama-lama kepikiran buat mengumpulkan
+      hasilnya di satu tempat, jadi akhirnya saya bikin website ini.
+      <br><br>
+      Isinya belum sempurna dan mungkin masih bakal sering berubah.
+      Kalau ada bagian yang kurang rapi atau belum berfungsi, berarti
+      memang masih perlu saya benahi.
+    </p>
+  </section>
+</main>
+
+<main id="project">
+  <section class="hero">
+    <div class="label">THE JOURNEY STARTS HERE</div>
+    <h1>MY <span>PROJECTS.</span></h1>
+    <div class="line"></div>
+    <p class="description">
+      Ini beberapa hal yang pernah saya kerjakan. Coba pilih yang mau dilihat.
+    </p>
+
+    <div class="cards">
+      <button class="card web-card" type="button" onclick="openWebProjects()" style="text-align:left;color:inherit;font:inherit;cursor:pointer;width:100%">
+        <div class="number">01 / WEB ↗</div>
+        <h3>Web Development</h3>
+        <p>Website yang pernah saya buat atau masih saya kerjakan.</p>
+      </button>
+
+      <button class="card" type="button" onclick="openCreativeDesign()" style="text-align:left;color:inherit;font:inherit;cursor:pointer;width:100%">
+        <div class="number">02 / DESIGN ↗</div>
+        <h3>Creative Design</h3>
+        <p>Beberapa hasil edit foto, gambar, dan percobaan desain.</p>
+      </button>
+
+      <button class="card" type="button" onclick="openProjectReasons()" style="text-align:left;color:inherit;font:inherit;cursor:pointer;width:100%">
+        <div class="number">03 / REASONS ↗</div>
+        <h3>Kenapa Saya Membuatnya?</h3>
+        <p>Cerita singkat kenapa saya membuat KINGGS Tools dan website kelas.</p>
+      </button>
+
+      <button class="card" type="button" onclick="openMyWeb()" style="text-align:left;color:inherit;font:inherit;cursor:pointer;width:100%">
+        <div class="number">04 / MY WEB ↗</div>
+        <h3>All My Websites</h3>
+        <p>Daftar website buatan saya, termasuk yang masih dikerjakan.</p>
+      </button>
+
+      <button class="card" type="button" onclick="openMyProfile()" style="text-align:left;color:inherit;font:inherit;cursor:pointer;width:100%">
+        <div class="number">05 / DATA DIRI ↗</div>
+        <h3>About Me</h3>
+        <p>Sedikit tentang diri saya, hal yang saya suka, dan keseharian saya.</p>
+      </button>
+
+      <button class="card" type="button" onclick="openDeveloperDashboard()" style="text-align:left;color:inherit;font:inherit;cursor:pointer;width:100%">
+        <div class="number">06 / DEVELOPER ↗</div>
+        <h3>Developer Dashboard</h3>
+        <p>Catatan singkat tentang project dan bagian yang masih ingin saya kembangkan.</p>
+      </button>
+    </div>
+
+    <div class="actions">
+      <button class="secondary" onclick="backHome()">← Kembali</button>
+    </div>
+  </section>
+</main>
+
+
+<section id="embeddedWorkspace">
+  <div class="workspace-toolbar">
+    <button class="secondary" onclick="showPortfolioProjects()">← Kembali ke Project</button>
+  </div>
+  <iframe id="workspaceFrame" title="KING TRI PROJECT workspace" sandbox="allow-scripts allow-forms allow-same-origin allow-downloads allow-modals allow-popups"></iframe>
+</section>
+
+<footer>
+  <div style="display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center">
+    <span>© <span id="year"></span> KING TRI PROJECT · Built with curiosity.</span>
+    <span style="color:var(--muted)">Tekan ⚙ untuk ubah tema &amp; warna</span>
+  </div>
+</footer>
+
+<div id="settingsOverlay" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" aria-hidden="true">
+  <section id="settingsPanel">
+    <div class="settings-head">
+      <h2 id="settingsTitle">Pengaturan Website</h2>
+      <button type="button" class="settings-close" id="closeSettings" aria-label="Tutup">×</button>
+    </div>
+    <div class="settings-preview" aria-live="polite">
+      <div class="settings-preview-dot" id="settingsPreviewDot"></div>
+      <div class="settings-preview-meta">
+        <strong id="settingsPreviewTitle">Tema Gelap</strong>
+        <span id="settingsPreviewSub">Aksen #a8ff78 · disimpan otomatis</span>
+      </div>
+    </div>
+    <div class="settings-group">
+      <span class="settings-label">TEMA</span>
+      <div class="theme-toggle">
+        <button type="button" class="theme-option" data-theme="dark">● Gelap</button>
+        <button type="button" class="theme-option" data-theme="light">○ Terang</button>
+      </div>
+    </div>
+    <div class="settings-group">
+      <span class="settings-label">WARNA AKSEN</span>
+      <div class="color-grid" id="accentSwatches">
+        <button type="button" class="color-swatch" data-color="#a8ff78" style="--swatch:#a8ff78" aria-label="Hijau"></button>
+        <button type="button" class="color-swatch" data-color="#7dd3fc" style="--swatch:#7dd3fc" aria-label="Biru"></button>
+        <button type="button" class="color-swatch" data-color="#f9a8d4" style="--swatch:#f9a8d4" aria-label="Pink"></button>
+        <button type="button" class="color-swatch" data-color="#fbbf24" style="--swatch:#fbbf24" aria-label="Kuning"></button>
+        <button type="button" class="color-swatch" data-color="#c4b5fd" style="--swatch:#c4b5fd" aria-label="Ungu"></button>
+        <button type="button" class="color-swatch" data-color="#fb7185" style="--swatch:#fb7185" aria-label="Merah muda"></button>
+      </div>
+      <div class="custom-color-row">
+        <input type="color" id="customAccent" value="#a8ff78" aria-label="Pilih warna kustom">
+        <span>Atau pilih warna sendiri</span>
+      </div>
+    </div>
+    <div class="settings-group">
+      <span class="settings-label">SUDUT</span>
+      <div class="radius-toggle">
+        <button type="button" class="choice-btn" data-radius="sharp">Tajam</button>
+        <button type="button" class="choice-btn" data-radius="normal">Normal</button>
+        <button type="button" class="choice-btn" data-radius="round">Bulat</button>
+      </div>
+    </div>
+    <div class="settings-group">
+      <span class="settings-label">KERAPATAN</span>
+      <div class="density-toggle">
+        <button type="button" class="choice-btn" data-density="compact">Rapat</button>
+        <button type="button" class="choice-btn" data-density="normal">Normal</button>
+        <button type="button" class="choice-btn" data-density="spacious">Longgar</button>
+      </div>
+    </div>
+    <div class="settings-group">
+      <span class="settings-label">TAMPILAN</span>
+      <div class="settings-row">
+        <div><span>Efek glow</span><small>Cahaya latar di pojok halaman</small></div>
+        <label class="switch"><input type="checkbox" id="toggleGlow" checked><span class="switch-slider"></span></label>
+      </div>
+      <div class="settings-row">
+        <div><span>Animasi</span><small>Transisi &amp; animasi halaman</small></div>
+        <label class="switch"><input type="checkbox" id="toggleAnim" checked><span class="switch-slider"></span></label>
+      </div>
+      <div class="settings-row">
+        <div><span>Ukuran teks</span><small>Sedikit lebih besar di seluruh halaman</small></div>
+        <label class="switch"><input type="checkbox" id="toggleTextSize"><span class="switch-slider"></span></label>
+      </div>
+    </div>
+    <div class="settings-actions">
+      <button type="button" class="secondary" id="resetSettings">Reset default</button>
+      <button type="button" class="primary" id="saveSettingsClose">Selesai</button>
+    </div>
+    <p class="settings-note">Preferensi disimpan di perangkatmu (localStorage). Tema utama berlaku di portfolio; halaman project di dalam frame memakai desain masing-masing.</p>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<button type="button" class="settings-fab" id="settingsFab" aria-label="Buka pengaturan" title="Pengaturan">⚙</button>
+<div id="kingTriSecret" aria-hidden="true">
+  <div class="secret-scanlines"></div>
+  <header class="hacker-nav">
+    <div class="hacker-brand"><span class="crown">♛</span> KING TRI PROJECT <span class="nav-tag">// CLASSIFIED</span></div>
+    <div class="hacker-nav-status"><span>● SYSTEM ONLINE</span><span>ACCESS: <b>SECRET</b></span></div>
+  </header>
+
+  <main class="hacker-shell">
+    <section class="hacker-hero">
+      <div class="terminal-window hero-terminal">
+        <div class="terminal-bar"><span>● ● ●</span><span>ACCESS_GRANTED.exe</span><span class="terminal-live">LIVE</span></div>
+        <div class="hero-crown">♛</div>
+        <p class="eyebrow">SECURE CONNECTION ESTABLISHED</p>
+        <h2>// ACCESS <span>GRANTED</span></h2>
+        <p class="hero-sub">WELCOME TO THE HIDDEN SIDE</p>
+        <div class="loading-track"><span></span></div>
+        <div class="terminal-lines">
+          <p>&gt; Initializing secure environment...</p>
+          <p>&gt; Loading classified files...</p>
+          <p>&gt; Visitor status: <b>VERIFIED</b></p>
+          <p>&gt; Enjoy your stay, special visitor<span class="cursor">_</span></p>
+        </div>
+      </div>
+
+      <div class="terminal-window secret-message-box">
+        <div class="section-heading">// SECRET_MESSAGE.txt <span>FILE 000</span></div>
+        <p class="secret-message">Lho, kok bisa sampai sini? Berarti kamu nemu halaman yang agak tersembunyi di website ini. Selamat menjelajah!</p>
+        <p class="secret-welcome">SELAMAT DATANG DI SISI TERSEMBUNYI KING TRI PROJECT</p>
+        <div class="message-foot">&gt; Halaman ini memang sengaja disembunyikan.<br>&gt; Nggak ada hadiah khusus, cuma easter egg kecil.<br>&gt; Silakan lihat-lihat dulu.</div>
+      </div>
+    </section>
+
+    <section class="hacker-grid">
+      <div class="terminal-window developer-log">
+        <div class="section-heading">// DEVELOPER'S SECRET LOG <span>LOG_001</span></div>
+        <div class="log-row"><span>01</span><b>STATUS</b><i>:</i><strong>STILL LEARNING</strong></div>
+        <div class="log-row"><span>02</span><b>MISSION</b><i>:</i><strong>BUILD SOMETHING USEFUL</strong></div>
+        <div class="log-row"><span>03</span><b>PROGRESS</b><i>:</i><strong>IMPROVING EVERYDAY</strong></div>
+        <div class="log-row"><span>04</span><b>NEXT OBJECTIVE</b><i>:</i><strong>CREATE SOMETHING AMAZING</strong></div>
+        <div class="log-row"><span>05</span><b>REMINDER</b><i>:</i><strong>CONSISTENCY IS THE KEY</strong></div>
+        <blockquote>“pelan-pelan, yang penting jalan.”<small>— KING TRI</small></blockquote>
+      </div>
+
+      <div class="terminal-window visitor-card">
+        <div class="section-heading">// VISITOR CERTIFICATE <span>NO. 001</span></div>
+        <div class="certificate">
+          <div class="certificate-crown">♛</div>
+          <p class="certificate-label">CLASSIFIED VISITOR</p>
+          <h3>NO. 001</h3>
+          <p>This badge is for those who discovered the hidden page of KING TRI PROJECT.</p>
+          <div class="certificate-bottom"><span>STATUS: ELITE VISITOR<br>ACCESS: GRANTED</span><button type="button" id="copySecretBadge">▣ COPY BADGE ID</button></div>
+        </div>
+        <p class="copy-feedback" id="secretCopyFeedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="terminal-window classified-files">
+      <div class="section-heading">// CLASSIFIED FILES <span>CHOOSE A FILE TO OPEN</span></div>
+      <div class="file-grid">
+        <button class="classified-file" type="button" data-secret-file="about"><span class="file-top">[ FILE 001 ] <b>OPEN ↗</b></span><span class="folder-icon">▰</span><strong>TENTANG KING TRI</strong><small>Siapa saya, dan apa tujuan dari project ini?</small></button>
+        <button class="classified-file" type="button" data-secret-file="coding"><span class="file-top">[ FILE 002 ] <b>OPEN ↗</b></span><span class="folder-icon">▰</span><strong>PERJALANAN BELAJAR CODING</strong><small>Dari nol sampai sekarang. Perjalanan masih panjang...</small></button>
+        <button class="classified-file" type="button" data-secret-file="visitor"><span class="file-top">[ FILE 003 ] <b>OPEN ↗</b></span><span class="folder-icon">▰</span><strong>PESAN UNTUK PENGUNJUNG</strong><small>Pesan kecil buat kamu yang berhasil sampai sini.</small></button>
+      </div>
+      <div id="secretFileContent" class="file-content" hidden aria-live="polite">
+        <div class="section-heading" id="secretFileTitle">// FILE CONTENT</div>
+        <p id="secretFileText"></p>
+        <button type="button" id="closeSecretFile">[ CLOSE FILE ]</button>
+      </div>
+    </section>
+
+    <footer class="hacker-footer">
+      <div><span class="footer-label">READY TO EXPLORE MORE?</span><p>&gt; VISITOR: SPECIAL<br>&gt; STATUS: VERIFIED<br>&gt; LEVEL: 001</p></div>
+      <div class="footer-center">THANK YOU FOR FINDING THIS PAGE.<br><span>BUT THERE'S MORE THAN MEETS THE EYE.</span><div class="footer-crown">♛</div></div>
+      <button type="button" id="secretExit">← KEMBALI KE WEBSITE</button>
+    </footer>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
